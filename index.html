@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tulasidas Gouda | Tech in Sagein</title>
+<meta name="description" content="Official profile of Tulasidas Gouda, creator of Tech in Sagein. Kannada Tech YouTuber covering mobiles, apps, software tutorials, and stock market education.">
+<meta name="keywords" content="Tech in Sagein, Tulasidas Gouda, Kannada Tech YouTuber, Stock Market, PUBG Battlegrounds PC, Ankola, Uttar Kannada">
+<meta name="author" content="Tulasidas Gouda">
+<meta property="og:title" content="Tulasidas Gouda | Tech in Sagein">
+<meta property="og:description" content="Kannada tech and finance channel focused on mobiles, apps, software tutorials, and stock market education.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="http://www.youtube.com/@TechinSagein">
+<meta property="og:image" content="Screenshot (28).png">
+<meta name="theme-color" content="#0b1220">
+<style>
+ :root{
+  --bg:#0b0f17;
+  --bg-elev:#0f1522;
+  --card:#11192a;
+  --muted:#93a0b4;
+  --text:#e7eefc;
+  --accent:#3aa0ff;
+  --accent-2:#6cc1ff;
+  --border:#1f2a3d;
+  --good:#10b981;
+  --bg-gradient: linear-gradient(180deg,#0b0f17 0%,#0b1220 100%);
+ }
+ [data-theme="light"]{
+  --bg:#f7f9fc;
+  --bg-elev:#ffffff;
+  --card:#ffffff;
+  --muted:#4b5565;
+  --text:#0f172a;
+  --accent:#2563eb;
+  --accent-2:#3b82f6;
+  --border:#e5e7eb;
+  --good:#10b981;
+  --bg-gradient: linear-gradient(180deg,#f7f9fc 0%,#eef2f7 100%);
+ }
+ *{box-sizing:border-box}
+ html{scroll-behavior:smooth}
+ body{
+  margin:0;
+  font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,Segoe UI Emoji,Segoe UI Symbol;
+  background:var(--bg-gradient);
+  color:var(--text);
+  line-height:1.6;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-2)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+ img{max-width:100%;height:auto;display:block}
+ .container{width:min(1100px,92%);margin-inline:auto}
+ header{
+  position:sticky;top:0;z-index:50;
+  background:color-mix(in oklab, var(--bg) 70%, transparent);
+  backdrop-filter:saturate(180%) blur(16px);
+  border-bottom:1px solid var(--border);
+}
+ .nav{display:flex;align-items:center;justify-content:space-between;padding:.8rem 0}
+ .brand{display:flex;align-items:center;gap:.7rem;font-weight:700;letter-spacing:.3px}
+ .brand-mark{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(135deg,var(--accent),#5c7cf8);
+  display:grid;place-items:center;color:#061425;font-weight:900
+ }
+ .brand-photo{width:34px;height:34px;border-radius:9px;overflow:hidden;border:1px solid var(--border);background:var(--bg-elev)}
+ .brand-photo img{width:100%;height:100%;object-fit:cover;display:block}
+ .brand-photo{animation:floatPulse 6s ease-in-out infinite alternate}
+ .nav-links{display:flex;gap:1.1rem;align-items:center}
+ .nav-links a{color:var(--text);opacity:.9;padding:.4rem .6rem;border-radius:.5rem}
+ .nav-links a:hover{background:rgba(255,255,255,.05)}
+ .hamb{display:none;background:transparent;border:0;color:var(--text);font-size:1.5rem}
+.theme-toggle{background:transparent;border:1px solid var(--border);color:var(--text);font-size:.95rem;padding:.35rem .6rem;border-radius:.6rem}
+.theme-toggle:hover{background:rgba(0,0,0,.05)}
+@media (max-width:840px){
+  .hamb{display:block}
+  .nav-links{
+   position:fixed;inset:56px 0 auto 0;background:rgba(11,18,32,.95);
+   flex-direction:column;padding:1rem;border-bottom:1px solid var(--border);display:none
+  }
+  .nav-links.open{display:flex}
+ }
+
+ .hero{padding:64px 0 36px}
+ .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+ @media (max-width:900px){.hero-grid{grid-template-columns:1fr;gap:1.4rem}}
+ .avatar{
+  width:140px;height:140px;border-radius:50%;
+  border:3px solid #1e2a42;outline:4px solid rgba(58,160,255,.15);
+  overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.35);
+  animation:glowPulse 3.2s ease-in-out infinite
+ }
+ .badge{display:inline-flex;align-items:center;gap:.4rem;padding:.28rem .6rem;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:.88rem}
+ .title{font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.2;margin:.6rem 0}
+ .subtitle{color:var(--muted)}
+ .actions{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:1rem}
+ .btn{
+  display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1rem;border-radius:.7rem;border:1px solid var(--border);
+  background:linear-gradient(180deg,#152032,#0f1726);color:var(--text);
+  transition:transform .2s ease, box-shadow .2s ease
+ }
+ .btn.primary{background:linear-gradient(180deg,#1a4b7e,#113a66);border-color:#204d7a}
+ .btn:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,0,0,.25)}
+ .pill{font-size:.86rem;color:#9fb1c9;border:1px solid var(--border);padding:.25rem .6rem;border-radius:999px}
+ .pill{white-space:nowrap}
+ .lang{animation:pillGlow 3.6s ease-in-out infinite;box-shadow:0 0 0 0 rgba(58,160,255,.0)}
+ .lang.delay1{animation-delay:0s}
+ .lang.delay2{animation-delay:.4s}
+ .lang.delay3{animation-delay:.8s}
+
+ section{padding:56px 0;border-top:1px solid var(--border)}
+ .section-head{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1.2rem;flex-wrap:wrap}
+ .section-title{font-size:1.4rem;margin:0}
+ .grid{display:grid;gap:1rem}
+ .cols-2{grid-template-columns:1fr 1fr}
+ @media (max-width:900px){.cols-2{grid-template-columns:1fr}}
+ .card{
+  background:linear-gradient(180deg,var(--card),#0f1726);
+  border:1px solid var(--border);border-radius:14px;padding:1rem;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  overflow:hidden
+ }
+ .card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(0,0,0,.35);border-color:#274065}
+ .yt-card{display:grid;grid-template-columns:120px 1fr;gap:1rem;align-items:center}
+ @media (max-width:520px){.yt-card{grid-template-columns:1fr}}
+ .yt-thumb{width:100%;aspect-ratio:1.6/1;object-fit:cover;border-radius:10px;border:1px solid var(--border);transition:transform .35s ease}
+ .stock-img,.game-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:12px;border:1px solid var(--border);background:#0c1422;transition:transform .35s ease}
+ .card:hover .yt-thumb,.card:hover .stock-img,.card:hover .game-img{transform:scale(1.03)}
+ .game-grid{grid-template-columns:1fr 1fr}
+ @media (max-width:720px){.game-grid{grid-template-columns:1fr}}
+
+ .game-tilt{transition:transform .2s ease, box-shadow .25s ease;transform-style:preserve-3d}
+ .game-tilt{position:relative;overflow:hidden}
+ .game-tilt:hover{box-shadow:0 18px 36px rgba(0,0,0,.38)}
+ .game-tilt:hover .game-img{transform:scale(1.06)}
+ .game-img{will-change:transform}
+ .game-bob{animation:gameBob 6s ease-in-out infinite alternate}
+ .ripple{position:absolute;inset:auto auto 0 0;width:20px;height:20px;border-radius:9999px;background:rgba(58,160,255,.25);transform:translate(-50%,-50%) scale(0);animation:ripple .6s ease-out forwards;pointer-events:none}
+
+ .list{display:flex;flex-wrap:wrap;gap:.5rem}
+ .chip{background:#0e1626;border:1px solid var(--border);color:#b7c6db;padding:.28rem .6rem;border-radius:999px;font-size:.9rem}
+
+ .contact-list{display:grid;gap:.6rem}
+ .contact-item{display:flex;justify-content:space-between;align-items:center;background:#0e1728;border:1px solid var(--border);border-radius:12px;padding:.8rem 1rem}
+ .contact-item a{word-break:break-word}
+
+ footer{padding:28px 0;text-align:center;color:#8fa0b5;border-top:1px solid var(--border);background:#0b0f17}
+
+ .reveal{opacity:0;transform:translateY(12px);transition:opacity .7s ease,transform .7s ease}
+ .reveal.visible{opacity:1;transform:none}
+
+ @keyframes glowPulse{
+  0%,100%{box-shadow:0 10px 30px rgba(0,0,0,.35), 0 0 0 0 rgba(58,160,255,.25)}
+  50%{box-shadow:0 10px 36px rgba(0,0,0,.4), 0 0 0 10px rgba(58,160,255,.15)}
+ }
+ @keyframes floatPulse{
+  0%{transform:translateY(0)}
+  100%{transform:translateY(-3px)}
+ }
+ @keyframes gameBob{
+  0%{transform:translateY(0)}
+  100%{transform:translateY(-6px)}
+ }
+ @keyframes ripple{to{transform:translate(-50%,-50%) scale(6);opacity:0}}
+ @keyframes pillGlow{
+  0%,100%{box-shadow:0 0 0 0 rgba(58,160,255,.0), inset 0 0 0 0 rgba(58,160,255,.0)}
+  30%{box-shadow:0 0 12px 2px rgba(58,160,255,.25), inset 0 0 0 0 rgba(58,160,255,.0)}
+  60%{box-shadow:0 0 6px 1px rgba(58,160,255,.18), inset 0 0 0 0 rgba(58,160,255,.0)}
+ }
+
+ @media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important}
+ }
+</style>
+</head>
+<body>
+<header>
+  <nav class="container nav">
+    <div class="brand">
+      <div class="brand-photo"><img src="WhatsApp Image 2025-10-30 at 14.04.37_69bc10c3.jpg" alt="Tech in Sagein logo"></div>
+      <div>Tulasidas Gouda</div>
+    </div>
+    <div style="display:flex;align-items:center;gap:.6rem">
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle color theme">Light</button>
+      <button class="hamb" aria-label="Toggle menu">☰</button>
+    </div>
+    <div class="nav-links" id="navLinks" role="navigation" aria-label="Primary">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#youtube">YouTube</a>
+      <a href="#stock">Stock Market</a>
+      <a href="#gaming">Gaming</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <div class="reveal">
+        <span class="badge">
+          <span style="width:8px;height:8px;border-radius:999px;background:var(--good)"></span>
+          Tech in Sagein
+        </span>
+        <h1 class="title">Hi, I’m <span style="color:var(--accent)">Tulasidas Gouda</span></h1>
+        <p class="subtitle">From Ankola, Uttar Kannada, Karnataka. I create Kannada content on technology and stock market learning, making complex topics simple.</p>
+        <div class="actions">
+          <a class="btn primary" href="http://www.youtube.com/@TechinSagein" target="_blank" rel="noopener">Visit YouTube Channel</a>
+          <a class="btn" href="#contact">Contact Me</a>
+          <span class="pill lang delay1">Kannada</span>
+          <span class="pill lang delay2">English</span>
+          <span class="pill lang delay3">Hindi</span>
+        </div>
+      </div>
+      <div class="reveal" style="justify-self:center">
+        <div class="avatar"><img src="Screenshot (5).png" alt="Profile photo of Tulasidas Gouda"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container grid cols-2">
+      <div class="reveal card">
+        <h2 class="section-title" style="margin-top:.2rem">About</h2>
+        <p>Tech in Sagein is a Kannada tech and finance channel focused on mobiles, apps, software tutorials, and stock market education. The channel helps people understand technology and trading in a simple and honest way.</p>
+        <div class="list" style="margin-top:.6rem">
+          <span class="chip">Ankola, Uttar Kannada</span>
+          <span class="chip">Karnataka</span>
+          <span class="chip">Tech</span>
+          <span class="chip">Finance</span>
+          <span class="chip">Education</span>
+        </div>
+      </div>
+      <div class="reveal card">
+        <img class="yt-thumb" src="Screenshot (28).png" alt="Tech in Sagein channel banner">
+      </div>
+    </div>
+  </section>
+
+  <section id="youtube">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">YouTube</h2>
+        <span class="pill" aria-label="Current subscribers">36,547 subscribers</span>
+        <a class="btn" href="http://www.youtube.com/@TechinSagein" target="_blank" rel="noopener">Subscribe</a>
+      </div>
+      <div class="card yt-card reveal">
+        <img class="yt-thumb" src="tech in sagein.jpg" alt="Tech in Sagein thumbnail alternate">
+        <div>
+          <h3 style="margin:0 0 .4rem">Tech in Sagein</h3>
+          <p style="margin:.2rem 0;color:var(--muted)">Kannada-first tutorials on mobiles, apps, software, and stock market basics. Clear, practical, and honest.</p>
+          <div class="actions" style="margin-top:.6rem">
+            <a class="btn primary" href="http://www.youtube.com/@TechinSagein" target="_blank" rel="noopener">Open Channel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stock">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Stock Market Learning</h2>
+        <span class="pill">BTC/USDT</span>
+      </div>
+      <div class="grid cols-2">
+        <div class="reveal card">
+          <p>I am an active BTC/USDT foreign exchange and cryptocurrency trader with hands-on experience in analyzing market trends, executing trades, and managing risk in high-volatility environments. I specialize in short-term and swing trading strategies, focusing on order flow, technical analysis, and liquidity zones to identify profitable trade setups. I continuously refine my approach through data-driven decision-making and disciplined trading psychology.</p>
+          <ul style="margin:.8rem 0 0 1rem;color:var(--muted)">
+            <li>Order flow, liquidity zones, and technical confluence</li>
+            <li>Short-term and swing strategies with strict risk management</li>
+            <li>Multi-timeframe analysis and confirmation-based entries</li>
+            <li>Data-driven reviews and journaling for continuous improvement</li>
+            <li>Discipline, patience, and psychology as edge amplifiers</li>
+          </ul>
+        </div>
+        <div class="reveal card">
+          <img class="stock-img" src="Screenshot (26).png" alt="BTC/USDT chart">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gaming">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">🎮 Gaming Zone</h2>
+        <span class="pill">PUBG: Battlegrounds (PC)</span>
+      </div>
+      <div class="card reveal">
+        <p style="margin:.2rem 0">Game ID: <strong>TulasidasGouda</strong></p>
+        <p style="margin:.2rem 0">Let’s play together! Add me in-game.</p>
+      </div>
+      <div class="grid game-grid" style="margin-top:1rem">
+        <div class="reveal card game-tilt"><img class="game-img game-bob" src="Screenshot (29).png" alt="PUBG battlegrounds screenshot 1"></div>
+        <div class="reveal card game-tilt"><img class="game-img" src="Screenshot (31).png" alt="PUBG battlegrounds screenshot 2"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Contact</h2>
+        <span class="pill">Let’s connect</span>
+      </div>
+      <div class="contact-list">
+        <div class="contact-item reveal">
+          <span>Email</span>
+          <a href="mailto:tgouda969@gmail.com">tgouda969@gmail.com</a>
+        </div>
+        <div class="contact-item reveal">
+          <span>Telegram</span>
+          <a href="https://t.me/techInSagein" target="_blank" rel="noopener">t.me/techInSagein</a>
+        </div>
+        <div class="contact-item reveal">
+          <span>Instagram</span>
+          <a href="https://instagram.com/tulasidas_gouda1" target="_blank" rel="noopener">instagram.com/tulasidas_gouda1</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© 2025 Tulasidas Gouda | Designed by Tulasidas Gouda</div>
+</footer>
+
+<script>
+ const hamb=document.querySelector('.hamb');
+ const nav=document.getElementById('navLinks');
+ hamb.addEventListener('click',()=>nav.classList.toggle('open'));
+ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+ const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target);} });
+ },{threshold:.12,rootMargin:"0px 0px -60px 0px"});
+ document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+ // Theme toggle with persistence
+ (function(){
+   const root=document.documentElement;
+   const btn=document.getElementById('themeToggle');
+   const stored=localStorage.getItem('theme');
+   const prefersLight=window.matchMedia('(prefers-color-scheme: light)').matches;
+   const initial=stored || (prefersLight ? 'light' : 'dark');
+   if(initial==='light') root.setAttribute('data-theme','light');
+   updateBtn();
+   btn.addEventListener('click',()=>{
+     const isLight=root.getAttribute('data-theme')==='light';
+     if(isLight){ root.removeAttribute('data-theme'); localStorage.setItem('theme','dark'); }
+     else { root.setAttribute('data-theme','light'); localStorage.setItem('theme','light'); }
+     updateBtn();
+   });
+   function updateBtn(){
+     const isLight=root.getAttribute('data-theme')==='light';
+     btn.textContent=isLight? 'Dark' : 'Light';
+   }
+ })();
+
+ // Gaming section: mouse tilt + click ripple
+ (function(){
+   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+   const cards = document.querySelectorAll('.game-tilt');
+   cards.forEach(card => {
+     if(!prefersReduced){
+       card.addEventListener('mousemove', (e)=>{
+         const r = card.getBoundingClientRect();
+         const cx = e.clientX - r.left;
+         const cy = e.clientY - r.top;
+         const rx = ((cy / r.height) - 0.5) * -6; // rotateX
+         const ry = ((cx / r.width) - 0.5) *  6; // rotateY
+         card.style.transform = `perspective(700px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+       });
+       card.addEventListener('mouseleave', ()=>{
+         card.style.transform = '';
+       });
+     }
+     card.addEventListener('click', (e)=>{
+       if(prefersReduced) return;
+       const r = card.getBoundingClientRect();
+       const x = e.clientX - r.left;
+       const y = e.clientY - r.top;
+       const s = document.createElement('span');
+       s.className = 'ripple';
+       s.style.left = x + 'px';
+       s.style.top = y + 'px';
+       card.appendChild(s);
+       s.addEventListener('animationend', ()=> s.remove());
+     });
+   });
+ })();
+</script>
+</body>
+</html>
